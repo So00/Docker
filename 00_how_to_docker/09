@@ -1,0 +1,5 @@
+#Lancer docker run -it debian
+
+#Une fois le container lancer faites la commande suivante
+
+apt-get update && apt-get install nano -y && apt-get install gcc -y && apt-get install git -y
