@@ -1,0 +1,38 @@
+Started GET "/" for 172.17.0.1 at 2018-05-14 11:27:21 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (9.9ms)
+Completed 200 OK in 46ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2018-05-14 11:27:44 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2018-05-14 11:27:49 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/bundle/gems/railties-5.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2018-05-14 11:32:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+NoMethodError (undefined method `root' for main:Object):
+  
+config/routes.rb:4:in `<main>'
+Started GET "/" for 172.17.0.1 at 2018-05-14 11:34:41 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HelloController#index as HTML
+  Rendering hello/index.html within layouts/application
+  Rendered hello/index.html within layouts/application (0.4ms)
+Completed 200 OK in 2913ms (Views: 2876.7ms | ActiveRecord: 0.0ms)
+
+
