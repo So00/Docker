@@ -1,0 +1,2 @@
+eval $(docker-machine env Char)
+docker image rm $(docker image ls -aq)
