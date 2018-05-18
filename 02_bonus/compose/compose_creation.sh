@@ -121,6 +121,16 @@ while [ $ANSWER = "yes" ]; do
 			fi
 		done
 	fi
+	read -p "Do you want to expose ports for host ? : " CONTAINER
+	if [ ! -z $CONTAINER ]; then
+		echo "   ports:\n     - \"$CONTAINER\"" >> docker-compose.yml
+		while [ ! -z $CONTAINER ]; do
+			read -p "More ports ? : " CONTAINER
+			if [ ! -z $CONTAINER ]; then
+				echo "     - \"$CONTAINER\"" >> docker-compose.yml
+			fi
+		done
+	fi
 	read -p "Do you want to expose some ports to linked services? : " CONTAINER
 	if [ ! -z $CONTAINER ]; then
 		echo "   expose:\n     - \"$CONTAINER\"" >> docker-compose.yml
@@ -155,7 +165,6 @@ while [ $ANSWER = "yes" ]; do
 			fi
 		done
 	fi
-
 	read -p "Do you want to add a volume (path from host or w/e) ? : " CONTAINER
 	if [ ! -z $CONTAINER ]; then
 		echo "   volumes:\n     - $CONTAINER" >> docker-compose.yml
@@ -196,16 +205,6 @@ fi
 while [ $NEW = "yes" ]; do
 	read -p "What is the network you want to add ? : " VOLUME
 	echo "    $VOLUME:" >> docker-compose.yml
-	read -p "Do you want to expose ports for host ? : " CONTAINER
-	if [ ! -z $CONTAINER ]; then
-		echo "   ports:\n     - \"$CONTAINER\"" >> docker-compose.yml
-		while [ ! -z $CONTAINER ]; do
-			read -p "More ports ? : " CONTAINER
-			if [ ! -z $CONTAINER ]; then
-				echo "     - \"$CONTAINER\"" >> docker-compose.yml
-			fi
-		done
-	fi
 	read -p "Do you want to add another network?" NEW
 	lowercase $NEW "NEW"
 done
