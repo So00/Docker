@@ -8,6 +8,6 @@ WORKDIR .
 
 EXPOSE 3000
 
-CMD vim
+ENTRYPOINT ["vim"]
 #lancer docker build -t vim .
 #et ensuite docker run -it vim
