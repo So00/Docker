@@ -16,6 +16,9 @@ RUN apt update && apt install -y tzdata && \
 
 EXPOSE 22 8080
 
-RUN echo '/opt/gitlab/embedded/bin/runsvdir-start&\nEXTERNAL_URL="localhost" && gitlab-ctl reconfigure\ntail -f /dev/random' > entrypoint.sh
+RUN echo '/opt/gitlab/embedded/bin/runsvdir-start&\nexternal_url="localhost" && gitlab-ctl reconfigure\ntail -f /dev/random' > entrypoint.sh
 
 CMD [ "sh", "/entrypoint.sh" ]
+
+#docker build -t gitlab .
+#docker run -it -d --privileged -p 80:80 -p 22:22 -p 8080:8080 gitlab
